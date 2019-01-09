@@ -10,7 +10,12 @@ $app->group('/hola/', function () {
         return $res->getBody()
                    ->write('Hello world!!');
     });
-
+    
+    $this->get('castellano', function ($req, $res, $args) {
+        return $res->getBody()
+                   ->write('Hola Mundo!!');
+    });
+    
     $this->get('{nom}', function ($req, $res, $args) {
         $nom=$args["nom"];
         return $res->getBody()
