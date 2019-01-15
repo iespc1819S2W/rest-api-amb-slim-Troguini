@@ -55,7 +55,7 @@ $app->group('/autor/', function () {
     });  
     
     $this->delete('{id}', function ($req, $res, $args) {
-        $obj = new Lloc();   
+        $obj = new Autor();   
         return $res
            ->withHeader('Content-type', 'application/json')
            ->getBody()
